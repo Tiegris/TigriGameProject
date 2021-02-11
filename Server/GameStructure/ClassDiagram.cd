@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameStructure.Region">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Neighbours" Type="GameStructure.Region" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.272" Y="0.5" />
+        <Point X="6.272" Y="0.302" />
+        <Point X="7.625" Y="0.302" />
+        <Point X="7.625" Y="1.172" />
+        <Point X="7.25" Y="1.172" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.185" Y="-0.244" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgCAAgAAAAAAAAQAAAAgAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Region.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="forces" />
+      <Property Name="OwnerFaction" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="slots" />
+      <Property Name="Neighbours" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="GameStructure.Slot">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="AllowedBuildings" Type="GameStructure.BuildingType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="-0.232" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Slot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AllowedBuildings" />
+      <Property Name="Building" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameStructure.Building">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Cost" Type="GameStructure.Materials" FixedFromPoint="true">
+      <Path>
+        <Point X="5.312" Y="3.738" />
+        <Point X="5.312" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Production" Type="GameStructure.Materials" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.375" Y="3.738" />
+        <Point X="6.375" Y="4.215" />
+        <Point X="6.375" Y="4.215" />
+        <Point X="6.375" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CanTrain" Type="GameStructure.UnitType" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.375" />
+        <Point X="7.938" Y="3.375" />
+        <Point X="7.938" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAhAAAAAABAAAAAAAABAAQAAAAAAAAA=</HashCode>
+      <FileName>Building.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cost" />
+      <Property Name="Production" />
+      <Property Name="CanTrain" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameStructure.Forces">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forces.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Armies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="GameStructure.Army">
+    <Position X="10" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAACAAQAAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Army.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStructure.Faction">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Faction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GameStructure.Materials">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAE=</HashCode>
+      <FileName>Materials.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="GameStructure.BuildingType">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAECgAA=</HashCode>
+      <FileName>BuildingType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameStructure.UnitType">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAABAAAgAAAAAAAEAgAA=</HashCode>
+      <FileName>UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

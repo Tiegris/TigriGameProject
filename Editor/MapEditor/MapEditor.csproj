@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Server\GameStructure\GameStructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TiegrisUtil">
+      <HintPath>..\..\..\TiegrisUtil\TiegrisUtil\bin\Release\net5.0\TiegrisUtil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

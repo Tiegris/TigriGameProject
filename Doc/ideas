@@ -1,0 +1,64 @@
+Game {
+    Board Board;
+    List<Faction> Factions;
+
+}
+
+Faction {
+    int Id;
+    string Name;
+    
+
+}
+
+Region {
+    List<Slot> Slots;
+    Forces Forces;
+}
+
+Slot {
+    BuildingTypes AllowedBuildings;
+    Building Building;
+}
+
+enum BuildingType {
+    None = 0,
+    Farm = 1 >> 0,
+    Fort = 1 >> 1,
+    Barack = 1 >> 2
+}
+
+Building {
+    bool Persistent;
+    BuildingTypes Type;
+    Materials Cost;
+    Materials Production;
+    ? BattleBonus;
+    UnitTypes CanTrain;
+}
+
+enum UnitTypes {
+    Footsoldier = 0,
+    HeavyInfantry = 1 >> 0,
+    Cavalry = 1 >> 1,    
+    Support = 1 >> 2
+}
+
+struct Materials {
+    int Wood;
+    int Gold;
+    int Food;
+}
+
+Forces {
+    List<Army> Armies;    
+}
+
+Army {
+    Faction Faction;
+    List<Battalion> Battalions;
+}
+
+Battalion {
+
+}
